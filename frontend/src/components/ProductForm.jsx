@@ -39,19 +39,19 @@ export default function ProductForm({ onAdd }) {
     <form className="card" onSubmit={handleSubmit}>
       <h2>Add Product</h2>
 
-      <div className="row">
+      <div className="form">
         <label>Name</label>
         <input name="name" value={form.name} onChange={handleChange} />
         {errors.name && <small className="error">{errors.name}</small>}
       </div>
 
-      <div className="row">
+      <div className="form">
         <label>Price</label>
         <input name="price" value={form.price} onChange={handleChange} />
         {errors.price && <small className="error">{errors.price}</small>}
       </div>
 
-      <div className="row">
+      <div className="form">
         <label>Description</label>
         <textarea
           name="description"
@@ -60,12 +60,13 @@ export default function ProductForm({ onAdd }) {
         />
       </div>
 
-      <div className="row">
+      <div className="form">
         <label>Category</label>
         <input name="category" value={form.category} onChange={handleChange} />
       </div>
-
+      <div className="form">
       <button type="submit">Add</button>
+      </div>
     </form>
   );
 }
